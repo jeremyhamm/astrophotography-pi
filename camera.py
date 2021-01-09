@@ -9,7 +9,7 @@ camera.start_preview()
 
 # Camera warm-up time
 sleep(2)
-camera.capture('/media/pi/CONFIG/foo.jpg')
+camera.capture('/media/pi/CONFIG/bar.jpg')
 
 # Wait indefinitely until the user terminates the script
 while True:
