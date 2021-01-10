@@ -5,7 +5,7 @@ from time import sleep
 
 # Env variables
 os.environ['resolution'] = '3280x2464'
-os.environ['framerate'] = 15
+os.environ['framerate'] = '15'
 os.environ['output_location'] = '/media/pi/CONFIG/'
 
 # Camera Init
