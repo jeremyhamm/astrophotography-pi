@@ -16,7 +16,7 @@ camera.start_preview()
 
 # Camera warm-up time
 sleep(2)
-camera.capture(os.environ.get('output_location') + 'bar.jpg')
+camera.capture('{path}bar.jpg'.format(path=os.environ.get('output_location')))
 
 # Wait indefinitely until the user terminates the script
 while True:
