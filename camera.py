@@ -18,7 +18,7 @@ print('Camera starting...')
 sleep(2)
 counter = 0
 for filename in camera.capture_continuous(str(os.environ.get('output_location')) + '/image{counter}.jpg'):
-  counter++
+  counter += 1
   if (counter != os.environ['session_limit'])
     print(str(os.environ.get('output_location')) + 'image{counter}.jpg')
   else
