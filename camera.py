@@ -20,7 +20,7 @@ counter = 0
 for filename in camera.capture_continuous(str(os.environ.get('output_location')) + '/image{counter}.jpg'):
   counter += 1
   if (counter != int(os.environ['session_limit'])):
-    print(str(os.environ.get('output_location')) + 'image{counter}.jpg')
+    print(filename)
   else:
     break
 
