@@ -8,10 +8,13 @@ os.environ['resolution'] = '3280x2464'
 os.environ['output_location'] = '/media/pi/CONFIG'
 os.environ['session_limit'] = '5'
 
-# Camera Init
-camera = picamera.PiCamera()
-camera.resolution = os.environ.get('resolution')
-camera.start_preview()
+# Methods
+def setupCamera():
+  print('Camera starting...')
+  camera = picamera.PiCamera()
+  camera.resolution = os.environ.get('resolution')
+  camera.start_preview()
+  sleep(2)
 
 def startSequence():
   counter = 0
@@ -22,10 +25,11 @@ def startSequence():
     else:
       break
 
-# Start camera sequence
-print('Camera starting...')
-sleep(2)
-startSequence()
+def endSession():
+  camera.close()
+  print('Complete')
 
-camera.close()
-print('Complete')
+# Start camera sequence
+setupCamera()
+startSequence()
+endSession()
