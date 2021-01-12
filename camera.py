@@ -13,8 +13,10 @@ camera.resolution = os.environ.get('resolution')
 camera.start_preview()
 
 # Camera warm-up time
-print('Camera starting...');
+print('Camera starting...')
 sleep(2)
-for counter in range(5):
-  print(str(os.environ.get('output_location')) + '/image' + str(counter) + '.jpg')
-  camera.capture_sequence(str(os.environ.get('output_location')) + '/image' + str(counter) + '.jpg')
+for filename in camera.capture_continuous(str(os.environ.get('output_location')) + '/image' + str(counter) + '.jpg'):
+    print(str(os.environ.get('output_location')) + '/image' + str(counter) + '.jpg')
+
+camera.close()
+print('Complete')
