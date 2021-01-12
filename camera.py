@@ -17,7 +17,3 @@ sleep(2)
 for counter in range(5):
     print(str(os.environ.get('output_location')) + '/image' + str(counter) + '.jpg')
     camera.capture_continuous(str(os.environ.get('output_location')) + '/image' + str(counter) + '.jpg')
-
-# Wait indefinitely until the user terminates the script
-while True:
-  sleep(1)
