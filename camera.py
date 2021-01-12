@@ -6,7 +6,7 @@ from time import sleep
 # Env variables
 os.environ['resolution'] = '3280x2464'
 os.environ['output_location'] = '/media/pi/CONFIG'
-os.environ['session_limit'] = 5
+os.environ['session_limit'] = '5'
 
 # Camera Init
 camera = picamera.PiCamera()
@@ -19,7 +19,7 @@ sleep(2)
 counter = 0
 for filename in camera.capture_continuous(str(os.environ.get('output_location')) + '/image{counter}.jpg'):
   counter += 1
-  if (counter != 5):
+  if (counter != int(os.environ['session_limit'])):
     print(str(os.environ.get('output_location')) + 'image{counter}.jpg')
   else:
     break
