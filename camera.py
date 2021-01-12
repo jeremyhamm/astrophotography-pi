@@ -15,8 +15,9 @@ def setupCamera():
   camera.resolution = os.environ.get('resolution')
   camera.start_preview()
   sleep(2)
+  return camera
 
-def startSequence():
+def startSequence(camera):
   counter = 0
   for filename in camera.capture_continuous(str(os.environ.get('output_location')) + '/image{counter}.jpg'):
     counter += 1
@@ -25,11 +26,11 @@ def startSequence():
     else:
       break
 
-def endSession():
+def endSession(camera):
   camera.close()
   print('Complete')
 
 # Start camera sequence
-setupCamera()
-startSequence()
-endSession()
+camera = setupCamera()
+startSequence(camera)
+endSession(camera)
