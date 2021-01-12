@@ -18,7 +18,7 @@ camera.start_preview()
 sleep(2)
 for counter in range(5):
     print(counter)
-    capture_continuous('{path}/image{counter}.jpg'.format(path=os.environ.get('output_location'))
+    camera.capture_continuous('{path}/image{counter}.jpg'.format(path=os.environ.get('output_location'))
 
 # Wait indefinitely until the user terminates the script
 while True:
