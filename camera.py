@@ -16,6 +16,6 @@ camera.start_preview()
 print('Camera starting...');
 sleep(2)
 camera.capture_sequence([
-  str(os.environ.get('output_location')) + '/image' + str(counter) + '.jpg' % i
-  for i in range(5)
+  str(os.environ.get('output_location')) + '/image' + str(counter) + '.jpg' % counter
+  for counter in range(5)
 ])
