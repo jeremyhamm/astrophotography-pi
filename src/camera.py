@@ -6,7 +6,7 @@ from time import sleep
 # Env variables
 os.environ['resolution'] = '3280x2464'
 os.environ['output_location'] = '/media/pi/CONFIG'
-os.environ['session_limit'] = '5'
+os.environ['session_limit'] = '5'ww
 
 # Methods
 def setupCamera():
