@@ -31,7 +31,10 @@ def endSession(camera):
   print('Complete')
 
 # Start camera sequence
-camera = setupCamera()
-startSequence(camera)
-endSession(camera)
+#camera = setupCamera()
+#startSequence(camera)
+#endSession(camera)
+
+camera = picamera.PiCamera()
+camera.start_preview()
 
