@@ -32,5 +32,5 @@ def endSession(camera):
 
 # Start camera sequence
 camera = setupCamera()
-startSequence(camera)
-endSession(camera)
+#startSequence(camera)
+#endSession(camera)
