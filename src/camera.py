@@ -14,8 +14,8 @@ def setupCamera():
   camera = picamera.PiCamera()
   camera.resolution = os.environ.get('resolution')
   camera.start_preview()
-  #sleep(2)
-  #return camera
+  sleep(2)
+  return camera
 
 def startSequence(camera):
   counter = 0
@@ -31,6 +31,10 @@ def endSession(camera):
   print('Complete')
 
 # Start camera sequence
-camera = setupCamera()
+#camera = setupCamera()
 #startSequence(camera)
 #endSession(camera)
+
+camera = picamera.PiCamera()
+camera.resolution = os.environ.get('resolution')
+camera.start_preview()
