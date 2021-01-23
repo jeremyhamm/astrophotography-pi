@@ -38,4 +38,5 @@ def endSession(camera):
 camera = picamera.PiCamera()
 camera.resolution = os.environ.get('resolution')
 camera.start_preview()
+sleep(60)
 
